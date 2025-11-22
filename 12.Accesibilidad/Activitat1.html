@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Actividad 1 — Evaluación de accesibilidad</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.6}
+    body{max-width:900px;margin:28px auto;padding:20px;background:#fff;color:#111}
+    header{border-bottom:1px solid #e6e6e6;padding-bottom:12px;margin-bottom:18px}
+    h1{font-size:1.6rem;margin:0}
+    h2{font-size:1.2rem;margin-top:18px}
+    table{border-collapse:collapse;width:100%;margin-top:8px}
+    th,td{border:1px solid #ddd;padding:8px;text-align:left}
+    .kbd{font-family:monospace;background:#f1f1f1;border-radius:4px;padding:2px 6px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Actividad 1 — Evaluación de accesibilidad</h1>
+    <p>Autor: Nombre del estudiante • Fecha: 2025-11-22</p>
+  </header>
+
+  <section aria-labelledby="proposito">
+    <h2 id="proposito">Propósito</h2>
+    <p>Comparación y revisión de la accesibilidad de tres sitios web mediante el panel <strong>Accessibility</strong> de las herramientas de desarrollo del navegador.</p>
+  </section>
+
+  <section aria-labelledby="procedimiento">
+    <h2 id="procedimiento">Procedimiento</h2>
+    <ol>
+      <li>Abrir el sitio web en el navegador.</li>
+      <li>Presionar <span class="kbd">F12</span> y acceder al panel <strong>Accessibility</strong>.</li>
+      <li>Revisar nombre accesible (name), rol (role), foco del teclado y atributos aria.</li>
+      <li>Registrar problemas y posibles mejoras.</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="sitio-a">
+    <h2 id="sitio-a">Sitio A: Wikipedia</h2>
+    <table>
+      <thead>
+        <tr><th>Elemento</th><th>Resultado</th><th>Mejora sugerida</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Estructura</td><td>Correcta</td><td>Ninguna</td></tr>
+        <tr><td>Texto alternativo</td><td>Presente</td><td>Mantener</td></tr>
+        <tr><td>Navegación por teclado</td><td>Funciona</td><td>Ninguna</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="sitio-b">
+    <h2 id="sitio-b">Sitio B: Example</h2>
+    <table>
+      <thead>
+        <tr><th>Elemento</th><th>Resultado</th><th>Mejora sugerida</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Labels de formularios</td><td>Incompletos</td><td>Añadir &lt;label&gt;</td></tr>
+        <tr><td>Botones con iconos</td><td>Sin aria-label</td><td>Añadir aria-label</td></tr>
+        <tr><td>Mensajes dinámicos</td><td>Sin aria-live</td><td>Añadir aria-live</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="sitio-c">
+    <h2 id="sitio-c">Sitio C: YouTube</h2>
+    <table>
+      <thead>
+        <tr><th>Elemento</th><th>Resultado</th><th>Mejora sugerida</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Botones multimedia</td><td>Accesibles</td><td>Ninguna</td></tr>
+        <tr><td>Contenido dinámico</td><td>Abundante</td><td>Reducir o controlar</td></tr>
+        <tr><td>Gestión del foco</td><td>Mejorable</td><td>Optimizar</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section aria-labelledby="conclusion">
+    <h2 id="conclusion">Conclusión</h2>
+    <p>Los principales problemas de accesibilidad detectados fueron la falta de etiquetas en formularios, la ausencia de aria-label en iconos y el manejo inadecuado de contenido dinámico.</p>
+  </section>
+</body>
+</html>
